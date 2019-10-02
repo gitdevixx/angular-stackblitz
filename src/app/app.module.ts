@@ -9,6 +9,7 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader'
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HelloComponent } from './hello.component';
+import { MainComponent } from './main/main.component';
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -27,8 +28,13 @@ export function createTranslateLoader(http: HttpClient) {
         deps: [HttpClient]
       }
     }),
-     ],
-  declarations: [ AppComponent, HelloComponent ],
+    AppRoutingModule
+  ],
+  declarations: [ 
+    AppComponent, 
+    HelloComponent, 
+    MainComponent 
+  ],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }
